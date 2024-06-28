@@ -95,8 +95,8 @@ class Contest_27_06_2024:
 
 
 def main():
-    con = Contest_27_06_2024()
-    con.A()
+    contest_27_06_2024 = Contest_27_06_2024()
+    contest_27_06_2024.A()
 
 
 if __name__ == "__main__":
