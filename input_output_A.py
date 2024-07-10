@@ -46,6 +46,14 @@ class InputFunction:
             a, b = map(int, e.split())
             rel.append((a, b))
         return rel
+    
+    def F231A(self, inputs: list[str]):
+        rel = []
+        for i, e in enumerate(inputs):
+            if i == 0:
+                continue
+            rel.append(list(map(int, inputs[i].split())))
+        return rel
 
 
 class OutputFunction:
@@ -54,7 +62,10 @@ class OutputFunction:
         return outputs
 
 
-    def F116A(self, output_list) -> int:
-        return int(output_list[0])
+    def F116A(self, outputs) -> int:
+        return int(outputs[0])
+    
+    def F231A(self, outputs: list[str]) -> int:
+        return int(outputs[0])
         
         

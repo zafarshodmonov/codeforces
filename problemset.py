@@ -1,5 +1,6 @@
 
 class CodeForcesHelp:
+
     def F71A_help_1(self, word: str) -> str:
         n = len(word) - 2
         return "{}{}{}".format(word[0], n, word[-1])
@@ -66,6 +67,34 @@ class CodeForces(CodeForcesHelp):
         # Output
         print(ans)
 
+    def F231A(self):
+
+        # Input
+        nums = self.F231A_input()
+
+        # Processing
+        n = self.F231A_processing(nums)
+
+        # Output
+        self.F231A_output(n)
+
+    def F231A_input(self):
+        n = int(input())
+        rel = []
+        for i in range(n):
+            rel.append(list(map(int, input().split())))
+        return rel
+    
+    def F231A_processing(self, nums):
+        sana = 0
+        for num in nums:
+            if sum(num) >= 2:
+                sana += 1
+        return sana
+    
+    def F231A_output(self, n):
+        print(n)
+
     def F1970G1_input(self):
         t = int(input())
         for test in range(t):
@@ -106,10 +135,9 @@ class CodeForces(CodeForcesHelp):
         self.F617A_output(ans)
 
 
-
 def main():
     solution = CodeForces()
-    solution.F71A()
+    solution.F231A()
 
 
 if __name__ == "__main__":

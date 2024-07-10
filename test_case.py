@@ -7,13 +7,13 @@ from problemset import CodeForces
 input_function = InputFunction()
 output_function = OutputFunction()
 
-ans = A("71A", 1, input_function.F71A, output_function.F71A)
+ans = A("231A", 1, input_function.F231A, output_function.F231A)
     
 codeforces = CodeForces()
 
 @pytest.mark.parametrize(
-        "words, out",
+        "nums, out",
         ans
 )
-def test_leetcode(words, out):
-    assert codeforces.F71A_processing(words) == out
+def test_leetcode(nums, out):
+    assert codeforces.F231A_processing(nums) == out
