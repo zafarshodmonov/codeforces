@@ -28,6 +28,15 @@ def A(name: str, n: int, fin, fout) -> list[tuple]:
         
         
 class InputFunction:
+
+    def F71A(self, inputs: list[str]):
+        rel = []
+        for i, e in enumerate(inputs):
+            if i == 0:
+                continue
+            rel.append(e)
+        return rel
+
     
     def F116A(self, s):
         rel = []
@@ -40,6 +49,10 @@ class InputFunction:
 
 
 class OutputFunction:
+
+    def F71A(self, outputs: list[str]) -> list[str]:
+        return outputs
+
 
     def F116A(self, output_list) -> int:
         return int(output_list[0])

@@ -1,6 +1,43 @@
 
-class CodeForces:
+class CodeForcesHelp:
+    def F71A_help_1(self, word: str) -> str:
+        n = len(word) - 2
+        return "{}{}{}".format(word[0], n, word[-1])
 
+
+class CodeForces(CodeForcesHelp):
+
+    def F71A(self):
+
+        # Input
+        nums = self.F71A_input()
+
+        # Processing
+        nums = self.F71A_processing(nums)
+
+        # Output
+        self.F71A_output(nums)
+
+    def F71A_input(self):
+        n = int(input())
+        rel = []
+        for i in range(n):
+            rel.append(input())
+        return rel
+    
+    def F71A_processing(self, nums: list[str]) -> list[str]:
+        rel = []
+        for word in nums:
+            if len(word) > 10:
+                rel.append(self.F71A_help_1(word))
+            else:
+                rel.append(word)
+        return rel
+    
+    def F71A_output(self, nums):
+        for word in nums:
+            print(word)
+   
     def F116A_input(self):
         n = int(input())
         rel = []
@@ -72,7 +109,7 @@ class CodeForces:
 
 def main():
     solution = CodeForces()
-    solution.F116A()
+    solution.F71A()
 
 
 if __name__ == "__main__":
