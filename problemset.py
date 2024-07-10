@@ -1,5 +1,5 @@
 
-class Solution:
+class CodeForces:
 
     def F116A_input(self):
         n = int(input())
@@ -69,8 +69,9 @@ class Solution:
         self.F617A_output(ans)
 
 
+
 def main():
-    solution = Solution()
+    solution = CodeForces()
     solution.F116A()
 
 

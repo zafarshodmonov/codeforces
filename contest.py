@@ -93,6 +93,9 @@ class Contest_27_06_2024:
         pass
 
 
+class Contest_30_06_2024:
+    pass
+
 
 def main():
     contest_27_06_2024 = Contest_27_06_2024()
